@@ -1,0 +1,20 @@
+
+<!--<div class="input-group">-->
+	<input *ngIf="model_th !== null" class="form-control" [(ngModel)]="model_th" [disabled]="isDisabled">
+	<input *ngIf="model_th === null"
+		   placeholder="yyyy-mm-dd"
+		   class="form-control"
+		   ngbDatepicker
+		   (click)="datePicker.toggle()"
+		   #datePicker="ngbDatepicker"
+		   [(ngModel)]="model" [disabled]="isDisabled" (ngModelChange)="getValue();">
+	<!--<input type="hidden" class="form-control" ngbDatepicker #datePicker="ngbDatepicker" [(ngModel)]="model" [disabled]="isDisabled" (ngModelChange)="getValue();">-->
+	<!--<div class="input-group-append">
+		<button class="btn btn-secondary" (click)="datePicker.toggle()" type="button" [disabled]="isDisabled">
+			<i class="la la-calendar"></i>
+		</button>
+	</div>-->
+<!--</div>-->
+
+ 
+ 

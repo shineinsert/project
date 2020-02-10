@@ -1,0 +1,125 @@
+<div class="kt-subheader-search ">
+	<div class="kt-container kt-container--fluid">
+		<div class="row">
+			<div class="col-8">
+				<i class="fa fa-edit fa-2x mr-4" style="color:white;"></i>
+				<h2 class="header-inline">แก้ไขผู้ใช้งาน</h2>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="content-body">
+	<div class="row">
+		<div class="col-12">
+			<div class="kt-portlet kt-portlet--mobile">
+				<div class="kt-portlet__head">
+					<div class="kt-portlet__head-label">
+						<button [routerLink]="'/home/customerlist'" class="btn btn-secondary btn-danger--icon">
+							<span>
+								<i class="flaticon2-back"></i>
+								<span>Back</span>
+							</span>
+						</button>
+					</div>
+				</div>
+				<div class="kt-portlet__body">
+					<div class="row">
+						<div class="col-xl-12 text-right" *ngIf="pageType ==='new'">
+							<button type="button" (click)="addUserDetail()" class="btn btn-success btn-elevate btn-icon-sm">
+								<i class="fa fa-save"></i>
+								บันทึก
+							</button>
+						</div>
+						<div class="col-xl-12 text-right" *ngIf="pageType ==='edit'">
+							<button type="button" (click)="saveUserDetail()" class="btn btn-success btn-elevate btn-icon-sm">
+								<i class="fa fa-save"></i>
+								บันทึก
+							</button>
+						</div>
+					</div>
+					<form name="userDetailForm" [formGroup]="userDetailForm">
+						<div class="row">
+
+							<div class="col-xl-12 col-md-12 col-12">
+								<h5>ข้อมูลเบื้องต้น</h5>
+								<div class="row">
+
+									<div class="col-xl-12 col-md-12 col-12">
+
+										<div class="row">
+											<div class="col-xl-4 col-md-4 col-12 mb-3">
+												<label>คำนำหน้า</label>
+												<input type="text" class="form-control kt-input" placeholder="คำนำหน้า" name="cus_prename_ct" formControlName="cus_prename_ct">
+											</div>
+											<div class="col-xl-4 col-md-4 col-12 mb-3">
+												<label>ชื่อตัวเเทนบริษัท</label>
+												<input type="text" class="form-control kt-input" placeholder="ชื่อตัวเเทนบริษัท" name="cus_name_cp" formControlName="cus_name_cp">
+											</div>
+											<div class="col-xl-4 col-md-4 col-12 mb-3">
+												<label>เบอร์โทรตัวเเทนบริษัท</label>
+												<input type="text" class="form-control kt-input" placeholder="เบอร์โทรตัวเเทนบริษัท" name="cus_tel_cp" formControlName="cus_tel_cp">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-xl-6 col-md-6 col-12 mb-3">
+												<label>ชื่อบริษัท</label>
+												<input type="text" class="form-control kt-input" placeholder="ชื่อบริษัท" name="cus_name_ct" formControlName="cus_name_ct">
+											</div>
+											<div class="col-xl-6 col-md-6 col-12 mb-3">
+												<label>เบอร์โทรบริษัท</label>
+												<input type="text" class="form-control kt-input" placeholder="เบอร์โทรบริษัท" name="cus_tel_ct" formControlName="cus_tel_ct">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-xl-12 col-md-12 col-12 mb-3">
+												<label>ที่อยู่บริษัท</label>
+												<textarea type="text" class="form-control kt-input" placeholder="ที่อยู่บริษัท" name="cus_address" formControlName="cus_address"></textarea>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-xl-12 col-md-12 col-12 mb-3">
+												<label>เลขผู้เสียภาษี</label>
+												<input type="text" class="form-control kt-input" placeholder="เลขผู้เสียภาษี" name="cus_tax" formControlName="cus_tax">
+											</div>
+
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+						</div>
+
+						<div class="row">
+							<div class="col-12 mb-2">
+								<h5>Username / Password</h5>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xl-4 col-md-4 col-12 mb-3">
+								<input type="text" class="form-control kt-input" placeholder="Username" name="userName" formControlName="userName">
+							</div>
+							<div class="col-xl-4 col-md-4 col-12 mb-3">
+								<input type="password" class="form-control kt-input" placeholder="Password" name="password" formControlName="password">
+							</div>
+						</div>
+						<!--<div class="row">
+							<div class="col-xl-4 col-md-4 col-12 mb-3">
+								<label>สถานะ</label>
+								<select class="form-control kt-input" placeholder="แขวงทางหลวง" name="cus_status" formControlName="cus_status">
+									<option value="1">ใช้งาน</option>
+									<option value="2">ไม่ใช้งาน</option>
+								</select>
+							</div>
+
+						</div>-->
+						</form>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
